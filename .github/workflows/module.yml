@@ -31,4 +31,4 @@ jobs:
       kmi: ${{ matrix.kmi }}
       ddk_release: '20251007'
       module_name: 'lsdriver'
-      module_path: 'module_template'
+      module_path: 'lsdriver'
