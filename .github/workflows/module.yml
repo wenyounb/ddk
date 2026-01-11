@@ -9,6 +9,8 @@ on:
       - '.github/workflows/module.yml'
       - '.github/workflows/ddk-lkm.yml'
   pull_request:
+  # 新增：手动触发规则，添加后就会出现Run workflow按钮
+  workflow_dispatch:
 
 jobs:
   build-modules:
