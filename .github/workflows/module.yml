@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'module_template/**'
+      - 'lsdriver/**'  # 新增：监听lsdriver目录的修改
       - '.github/workflows/module.yml'
       - '.github/workflows/ddk-lkm.yml'
   pull_request:
@@ -14,7 +14,7 @@ on:
 
 jobs:
   build-modules:
-    name: Build Shami.ko
+    name: Build lsdriver.ko
     uses: ./.github/workflows/ddk-lkm.yml
     strategy:
       fail-fast: false
@@ -30,5 +30,5 @@ jobs:
     with:
       kmi: ${{ matrix.kmi }}
       ddk_release: '20251007'
-      module_name: 'Shami'
+      module_name: 'lsdriver'
       module_path: 'module_template'
